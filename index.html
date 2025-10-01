@@ -1,5 +1,237 @@
-<!doctype html>
-<html>
-  <head><meta charset="utf-8"><title>Test</title></head>
-  <body><h1>It works 🎉</h1></body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nitish Belagali — Portfolio</title>
+  <meta name="description" content="Portfolio of Nitish Belagali — Data Analytics • BI • Data Engineering" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--brand:#2D4B91;--accent:#FFCB4C;}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    .container{max-width:1100px}
+    .glass{backdrop-filter:saturate(180%) blur(10px); background-color:rgba(255,255,255,.7)}
+    .dark .glass{background-color:rgba(17,24,39,.6)}
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 text-slate-800 dark:from-slate-950 dark:to-slate-900 dark:text-slate-100">
+  <!-- Nav -->
+  <header class="sticky top-0 z-50">
+    <nav class="glass border-b border-slate-200 dark:border-slate-800">
+      <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="#home" class="font-extrabold text-lg tracking-tight">Nitish<span class="text-[var(--brand)]">.</span></a>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#about" class="hover:text-[var(--brand)]">About</a>
+          <a href="#skills" class="hover:text-[var(--brand)]">Skills</a>
+          <a href="#experience" class="hover:text-[var(--brand)]">Experience</a>
+          <a href="#education" class="hover:text-[var(--brand)]">Education</a>
+          <a href="#projects" class="hover:text-[var(--brand)]">Projects</a>
+          <a href="#fun" class="hover:text-[var(--brand)]">Fun Facts</a>
+          <a href="#contact" class="hover:text-[var(--brand)]">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="inline-flex items-center gap-2 rounded-2xl border border-slate-300 dark:border-slate-700 px-3 py-1.5 text-xs font-semibold hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Toggle dark mode">🌙/☀️</button>
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-2xl bg-[var(--brand)] text-white px-3 py-1.5 text-xs font-semibold shadow hover:opacity-90">Hire me</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="container mx-auto px-4 pt-10 pb-14">
+    <div class="grid md:grid-cols-[260px_1fr] gap-8 items-center">
+      <img src="assets/profile.jpg" alt="Nitish Belagali portrait" class="w-56 h-56 object-cover rounded-3xl shadow-xl ring-4 ring-white dark:ring-slate-900" onerror="this.src='https://via.placeholder.com/448x448.png?text=Your+Photo';">
+      <div>
+        <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--brand)]">Data Analytics • BI • Data Engineering</span>
+        <h1 class="mt-2 text-3xl md:text-5xl font-extrabold leading-tight">Hi, I'm <span class="text-[var(--brand)]">Nitish Belagali</span> — turning data into decisions.</h1>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-2xl">MS in Information Systems @ Northeastern (Dec 2025). Currently IT Data Analyst Co‑op at Boehringer Ingelheim. Previously IBM & Accenture. I design robust data pipelines, insightful dashboards, and pragmatic analytics that move metrics.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="inline-flex items-center rounded-xl bg-[var(--brand)] text-white px-4 py-2 text-sm font-semibold shadow hover:opacity-90">View Projects</a>
+          <a href="https://github.com/yourusername" target="_blank" class="inline-flex items-center rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
+          <a href="assets/Nitish_Govind_Belagali_Resume.pdf" target="_blank" class="inline-flex items-center rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Download Resume</a>
+        </div>
+        <div class="mt-4 text-sm text-slate-500">Boston, MA • Open to Data Analyst / BI / DE roles</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container mx-auto px-4 py-10">
+    <div class="rounded-3xl bg-white/70 dark:bg-slate-900/60 shadow border border-slate-200 dark:border-slate-800 p-6 md:p-8">
+      <h2 class="text-2xl font-bold">About</h2>
+      <p class="mt-3 text-slate-600 dark:text-slate-300">I’m a data generalist with strong analytics and a builder’s mindset. Highlights include automating weekly export of <b>50M+ rows</b> from 19 Oracle tables (Python, cx_Oracle, scheduling), building stakeholder‑approved <b>Power BI</b> dashboards for toxicology studies, and modularizing an R Shiny scoring app. I care about clean data models, reproducibility, and storytelling with metrics.</p>
+      <ul class="mt-4 grid md:grid-cols-3 gap-3 text-sm">
+        <li class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800">📮 <b>Email:</b> <a class="underline" href="mailto:nitish@example.com">nitish@example.com</a></li>
+        <li class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800">📍 <b>Address:</b> Boston, MA, USA</li>
+        <li class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800">🔗 <b>GitHub:</b> <a class="underline" href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="container mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold">Skills</h2>
+    <div class="mt-4 grid md:grid-cols-3 gap-4">
+      <div class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Analytics & BI</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Power BI, Tableau, A/B testing basics, KPI design, data storytelling</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Data Engineering</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Python, SQL, Airflow, Oracle, Postgres, Azure/AWS, ETL/ELT, Docker</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">ML & Extras</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Pandas, scikit‑learn (light), XGBoost, GitHub Actions CI/CD</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="container mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold">Experience</h2>
+    <div class="mt-4 grid gap-4">
+      <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-semibold">IT Data Analyst (Co‑op) — Boehringer Ingelheim</h3>
+            <p class="text-sm text-slate-500">Jan 2025 – Jul 2025 • Ridgefield, CT (Remote/Hybrid)</p>
+          </div>
+          <span class="shrink-0 text-xs rounded-full px-2 py-1 bg-[var(--accent)] text-slate-900 font-bold">Current</span>
+        </div>
+        <ul class="list-disc pl-6 mt-3 text-sm space-y-1">
+          <li>Automated weekly export of <b>50M+ rows</b> from 19 Oracle SEND Explorer tables; compression, archiving, Windows Task Scheduler.</li>
+          <li>Built Power BI dashboards for toxicology study profiling; dynamic filters, dosing categories; accelerated reporting by ~70%.</li>
+          <li>Modularized R Shiny application (UI/server/scoring logic) with custom multi‑domain scoring engine.</li>
+        </ul>
+      </article>
+      <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Technical Specialist — IBM</h3>
+        <p class="text-sm text-slate-500">Aug 2021 – Jun 2023 • Bengaluru, IN (Client: National Grid)</p>
+        <ul class="list-disc pl-6 mt-3 text-sm space-y-1">
+          <li>ETL optimization & automation (Informatica → Airflow); 45% perf gain, 40% time reduction.</li>
+          <li>Data integrity improvements and reusable SQL views; reduced errors by 50%.</li>
+        </ul>
+      </article>
+      <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Associate Software Engineer — Accenture</h3>
+        <p class="text-sm text-slate-500">May 2021 – Apr 2022 • Bengaluru, IN</p>
+        <ul class="list-disc pl-6 mt-3 text-sm space-y-1">
+          <li>Sales & revenue dashboards (Tableau/Power BI) from MySQL staging; YoY trends, regional perf, segmentation.</li>
+          <li>Identified top 20% accounts driving revenue (Pareto), enabling targeted actions.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="container mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold">Education</h2>
+    <div class="mt-4 grid gap-4">
+      <div class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">M.S. in Information Systems — Northeastern University</h3>
+        <p class="text-sm text-slate-500">2024 – 2025 • Boston, MA • Expected Dec 2025</p>
+        <p class="text-sm mt-1">Coursework: Data Warehousing & BI, Generative AI & Prompt Engineering, Cloud Computing.</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">B.E. in Mechanical Engineering — KLE Technological University</h3>
+        <p class="text-sm text-slate-500">India</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container mx-auto px-4 py-10">
+    <div class="flex items-end justify-between">
+      <h2 class="text-2xl font-bold">Projects</h2>
+      <a href="https://github.com/yourusername?tab=repositories" target="_blank" class="text-sm font-semibold text-[var(--brand)] underline">All repos →</a>
+    </div>
+    <div class="mt-4 grid gap-4 md:grid-cols-2">
+      <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Oracle SEND Export Automation</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Python + cx_Oracle + multithreading to export 50M+ weekly rows; archival & scheduling.</p>
+        <div class="mt-3 flex gap-3 text-sm">
+          <a class="underline" target="_blank" href="https://github.com/yourusername/sender-export">GitHub</a>
+          <a class="underline" target="_blank" href="#">Demo/Write‑up</a>
+        </div>
+      </article>
+      <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Power BI Toxicology Dashboard</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Interactive insights: dosing categories, study profiling, automated refresh.</p>
+        <div class="mt-3 flex gap-3 text-sm">
+          <a class="underline" target="_blank" href="#">Case Study (PDF)</a>
+        </div>
+      </article>
+      <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Math Score Prediction</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">EDA + feature engineering; XGBoost best with ~89.5% R²; Flask app deploy.</p>
+        <div class="mt-3 flex gap-3 text-sm">
+          <a class="underline" target="_blank" href="https://github.com/yourusername/math-score-prediction">GitHub</a>
+          <a class="underline" target="_blank" href="#">Live Demo</a>
+        </div>
+      </article>
+      <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Adult Income Analysis</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Clustering + classification with logistic regression/KNN; 87% accuracy.</p>
+        <div class="mt-3 flex gap-3 text-sm">
+          <a class="underline" target="_blank" href="https://github.com/yourusername/adult-income-analysis">GitHub</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Fun facts -->
+  <section id="fun" class="container mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold">Fun Facts</h2>
+    <ul class="mt-3 grid md:grid-cols-3 gap-3 text-sm">
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🎓 I enjoy teaching & mentoring peers.</li>
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🤖 Built robotics & AI side projects for fun.</li>
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🥾 Love trekking & street photography.</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container mx-auto px-4 py-12">
+    <div class="rounded-3xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 p-6 md:p-8">
+      <h2 class="text-2xl font-bold">Contact</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-300">I’m happy to connect for roles, collaborations, or coffee chats.</p>
+      <div class="mt-5 grid md:grid-cols-3 gap-4 text-sm">
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800">
+          <div class="font-semibold">Email</div>
+          <a class="underline" href="mailto:nitish@example.com">nitish@example.com</a>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800">
+          <div class="font-semibold">Address</div>
+          <div>Boston, MA, USA</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800">
+          <div class="font-semibold">GitHub</div>
+          <a class="underline" href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-xs text-slate-500">
+    © <span id="year"></span> Nitish Belagali • Built with Tailwind • Hosted on GitHub Pages
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem('theme');
+    if ((saved === 'dark') || (!saved && prefersDark)) document.documentElement.classList.add('dark');
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
 </html>
