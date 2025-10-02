@@ -10,12 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root{--brand:#2D4B91;--accent:#FFCB4C;}
+    :root{--brand:#2D4B91;--accent:#FFCB4C}
     html{scroll-behavior:smooth}
     body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     .container{max-width:1100px}
     .glass{backdrop-filter:saturate(180%) blur(10px); background-color:rgba(255,255,255,.7)}
     .dark .glass{background-color:rgba(17,24,39,.6)}
+    .chip{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;padding:.4rem .8rem;border:1px solid rgba(148,163,184,.35);}
+    dialog::backdrop{background:rgba(0,0,0,.55)}
   </style>
 </head>
 <body class="bg-gradient-to-br from-slate-50 to-slate-100 text-slate-800 dark:from-slate-950 dark:to-slate-900 dark:text-slate-100">
@@ -30,6 +32,7 @@
           <a href="#experience" class="hover:text-[var(--brand)]">Experience</a>
           <a href="#education" class="hover:text-[var(--brand)]">Education</a>
           <a href="#projects" class="hover:text-[var(--brand)]">Projects</a>
+          <a href="#highlights" class="hover:text-[var(--brand)]">Highlights</a>
           <a href="#fun" class="hover:text-[var(--brand)]">Fun Facts</a>
           <a href="#contact" class="hover:text-[var(--brand)]">Contact</a>
         </div>
@@ -47,12 +50,12 @@
       <img src="assets/profile.jpg" alt="Nitish Belagali portrait" class="w-56 h-56 object-cover rounded-3xl shadow-xl ring-4 ring-white dark:ring-slate-900" onerror="this.src='https://via.placeholder.com/448x448.png?text=Your+Photo';">
       <div>
         <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--brand)]">Data Analytics • BI • Data Engineering</span>
-        <h1 class="mt-2 text-3xl md:text-5xl font-extrabold leading-tight">Hi, I'm <span class="text-[var(--brand)]">Nitish Belagali</span> — turning data into decisions.</h1>
-        <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-2xl">MS in Information Systems @ Northeastern (Dec 2025). Currently IT Data Analyst Co‑op at Boehringer Ingelheim. Previously IBM & Accenture. I design robust data pipelines, insightful dashboards, and pragmatic analytics that move metrics.</p>
+        <h1 class="mt-2 text-3xl md:text-5xl font-extrabold leading-tight">Hi, I’m <span class="text-[var(--brand)]">Nitish Belagali</span> — blending analytics with storytelling.</h1>
+        <p class="mt-3 text-slate-400">Graduate Student in Information Systems @ Northeastern • Experienced in Data Analytics, BI, and Data Engineering</p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#projects" class="inline-flex items-center rounded-xl bg-[var(--brand)] text-white px-4 py-2 text-sm font-semibold shadow hover:opacity-90">View Projects</a>
-          <a href="https://github.com/yourusername" target="_blank" class="inline-flex items-center rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
-          <a href="assets/Nitish_Govind_Belagali_Resume.pdf" target="_blank" class="inline-flex items-center rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Download Resume</a>
+          <a href="https://github.com/nitishbelagali" target="_blank" class="inline-flex items-center rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
+          <a href="assets/Nitish_Resume.pdf" target="_blank" class="inline-flex items-center rounded-xl border border-slate-300 dark:border-slate-700 px-4 py-2 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">Download Resume</a>
         </div>
         <div class="mt-4 text-sm text-slate-500">Boston, MA • Open to Data Analyst / BI / DE roles</div>
       </div>
@@ -63,30 +66,39 @@
   <section id="about" class="container mx-auto px-4 py-10">
     <div class="rounded-3xl bg-white/70 dark:bg-slate-900/60 shadow border border-slate-200 dark:border-slate-800 p-6 md:p-8">
       <h2 class="text-2xl font-bold">About</h2>
-      <p class="mt-3 text-slate-600 dark:text-slate-300">I’m a data generalist with strong analytics and a builder’s mindset. Highlights include automating weekly export of <b>50M+ rows</b> from 19 Oracle tables (Python, cx_Oracle, scheduling), building stakeholder‑approved <b>Power BI</b> dashboards for toxicology studies, and modularizing an R Shiny scoring app. I care about clean data models, reproducibility, and storytelling with metrics.</p>
-      <ul class="mt-4 grid md:grid-cols-3 gap-3 text-sm">
-        <li class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800">📮 <b>Email:</b> <a class="underline" href="mailto:nitish@example.com">nitish@example.com</a></li>
-        <li class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800">📍 <b>Address:</b> Boston, MA, USA</li>
-        <li class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800">🔗 <b>GitHub:</b> <a class="underline" href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
-      </ul>
+      <p class="mt-3 text-slate-600 dark:text-slate-300">I’m a data generalist with <b>3.5 years</b> of experience across analytics, BI, and data engineering. My work has spanned roles at <b>Boehringer Ingelheim</b>, <b>IBM</b>, and <b>Accenture</b>, turning raw data into clear, actionable insights. I enjoy building scalable pipelines, crafting dashboards that tell stories, and keeping data models clean and reliable.</p>
+      <p class="mt-3 text-slate-600 dark:text-slate-300">Outside of work I’m into football (soccer), Esports, and hiking — they keep me curious, competitive, and grounded.</p>
+      <div class="mt-4 grid md:grid-cols-3 gap-3 text-sm">
+        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800">📮 <b>Email:</b> <a class="underline" href="mailto:nitish.belagali@gmail.com">nitish.belagali@gmail.com</a></div>
+        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800">📍 <b>Address:</b> 1209, Boylston Street, Boston, MA 02215</div>
+        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800">🔗 <b>GitHub:</b> <a class="underline" href="https://github.com/nitishbelagali" target="_blank">github.com/nitishbelagali</a></div>
+      </div>
     </div>
   </section>
 
   <!-- Skills -->
   <section id="skills" class="container mx-auto px-4 py-10">
     <h2 class="text-2xl font-bold">Skills</h2>
-    <div class="mt-4 grid md:grid-cols-3 gap-4">
+    <div class="mt-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
       <div class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
         <h3 class="font-semibold">Analytics & BI</h3>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Power BI, Tableau, A/B testing basics, KPI design, data storytelling</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Tableau, Power BI, MS Excel, Alteryx, ER Studio, Informatica, Airflow, Data Storytelling</p>
       </div>
       <div class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-        <h3 class="font-semibold">Data Engineering</h3>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Python, SQL, Airflow, Oracle, Postgres, Azure/AWS, ETL/ELT, Docker</p>
+        <h3 class="font-semibold">Scripting</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Python (NumPy, Pandas, Matplotlib), Spark, Java, R</p>
       </div>
       <div class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-        <h3 class="font-semibold">ML & Extras</h3>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Pandas, scikit‑learn (light), XGBoost, GitHub Actions CI/CD</p>
+        <h3 class="font-semibold">Databases</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">PostgreSQL, Oracle, SparkSQL, MySQL, NoSQL, Redshift, BigQuery</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Statistics</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Regression, Clustering, Classification, t‑test, Chi‑square, A/B testing, Time series</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">ML & Other</h3>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Azure Data Factory, GitHub, Jupyter, JIRA, Confluence, Docker</p>
       </div>
     </div>
   </section>
@@ -99,30 +111,40 @@
         <div class="flex items-start justify-between gap-4">
           <div>
             <h3 class="font-semibold">IT Data Analyst (Co‑op) — Boehringer Ingelheim</h3>
-            <p class="text-sm text-slate-500">Jan 2025 – Jul 2025 • Ridgefield, CT (Remote/Hybrid)</p>
+            <p class="text-sm text-slate-500">Danbury, CT, USA • Jan 2025 – Jul 2025</p>
           </div>
-          <span class="shrink-0 text-xs rounded-full px-2 py-1 bg-[var(--accent)] text-slate-900 font-bold">Current</span>
         </div>
         <ul class="list-disc pl-6 mt-3 text-sm space-y-1">
-          <li>Automated weekly export of <b>50M+ rows</b> from 19 Oracle SEND Explorer tables; compression, archiving, Windows Task Scheduler.</li>
-          <li>Built Power BI dashboards for toxicology study profiling; dynamic filters, dosing categories; accelerated reporting by ~70%.</li>
-          <li>Modularized R Shiny application (UI/server/scoring logic) with custom multi‑domain scoring engine.</li>
+          <li>Automated weekly export of <b>50M+ Oracle rows</b> into distributed pipelines (Python, SQL, Redshift), improving integrity and reducing manual effort by <b>90%</b>.</li>
+          <li>Built <b>Power BI dashboards</b> with automated refresh and KPI planning; accelerated reporting by <b>70%</b> and improved KPI tracking for preclinical studies.</li>
+          <li>Modularized a complex <b>R Shiny</b> app with scientists and engineers, delivering scalable components across <b>5+ domains</b>.</li>
+          <li>Performed exploratory/statistical analysis on toxicology data, boosting review accuracy by <b>25%</b> and cutting regulatory rework by <b>15%</b>.</li>
         </ul>
       </article>
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-        <h3 class="font-semibold">Technical Specialist — IBM</h3>
-        <p class="text-sm text-slate-500">Aug 2021 – Jun 2023 • Bengaluru, IN (Client: National Grid)</p>
+        <h3 class="font-semibold">Technical Services Specialist — IBM</h3>
+        <p class="text-sm text-slate-500">Bengaluru, India • Aug 2021 – Jun 2023</p>
         <ul class="list-disc pl-6 mt-3 text-sm space-y-1">
-          <li>ETL optimization & automation (Informatica → Airflow); 45% perf gain, 40% time reduction.</li>
-          <li>Data integrity improvements and reusable SQL views; reduced errors by 50%.</li>
+          <li>Optimized ETL workflows (Informatica → Airflow), boosting performance by <b>45%</b> and reducing processing time by <b>40%</b> (saving 100+ hours weekly).</li>
+          <li>Designed real-time data strategies in BigQuery & SQL, cutting errors by <b>50%</b> and driving an <b>18%</b> increase in client acquisition.</li>
+          <li>Delivered Tableau dashboards and insights that improved application quality and accelerated delivery of business-critical features.</li>
+          <li>Supported Agile adoption, collaborating cross‑functionally to cut project timelines by <b>15%</b>.</li>
         </ul>
       </article>
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
         <h3 class="font-semibold">Associate Software Engineer — Accenture</h3>
-        <p class="text-sm text-slate-500">May 2021 – Apr 2022 • Bengaluru, IN</p>
+        <p class="text-sm text-slate-500">Bengaluru, India • Feb 2021 – Aug 2021</p>
         <ul class="list-disc pl-6 mt-3 text-sm space-y-1">
-          <li>Sales & revenue dashboards (Tableau/Power BI) from MySQL staging; YoY trends, regional perf, segmentation.</li>
-          <li>Identified top 20% accounts driving revenue (Pareto), enabling targeted actions.</li>
+          <li>Built Tableau dashboards for biomedical client data, driving a <b>25%</b> customer satisfaction increase and <b>30%</b> better decision‑making accuracy.</li>
+          <li>Applied advanced analytics to uncover trends, leading to <b>20%</b> revenue growth and <b>35%</b> operational cost reduction.</li>
+        </ul>
+      </article>
+      <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Junior SQL Developer Intern — Infocruise Solutions</h3>
+        <p class="text-sm text-slate-500">Bengaluru, India • Jan 2020 – Jun 2020</p>
+        <ul class="list-disc pl-6 mt-3 text-sm space-y-1">
+          <li>Designed database architecture (views, triggers, joins), improving processing speed by <b>15%</b> and retrieval by <b>60%</b>.</li>
+          <li>Automated SQL operations, boosting database performance by <b>25%</b>.</li>
         </ul>
       </article>
     </div>
@@ -134,12 +156,11 @@
     <div class="mt-4 grid gap-4">
       <div class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
         <h3 class="font-semibold">M.S. in Information Systems — Northeastern University</h3>
-        <p class="text-sm text-slate-500">2024 – 2025 • Boston, MA • Expected Dec 2025</p>
-        <p class="text-sm mt-1">Coursework: Data Warehousing & BI, Generative AI & Prompt Engineering, Cloud Computing.</p>
+        <p class="text-sm text-slate-500">Boston, MA • Sep 2023 – Dec 2025 • GPA: 3.7</p>
       </div>
       <div class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-        <h3 class="font-semibold">B.E. in Mechanical Engineering — KLE Technological University</h3>
-        <p class="text-sm text-slate-500">India</p>
+        <h3 class="font-semibold">B.E. in Computer Science — KLE Technological University</h3>
+        <p class="text-sm text-slate-500">Hubballi, KA, India • Aug 2016 – Jun 2020 • GPA: 3.4</p>
       </div>
     </div>
   </section>
@@ -148,49 +169,122 @@
   <section id="projects" class="container mx-auto px-4 py-10">
     <div class="flex items-end justify-between">
       <h2 class="text-2xl font-bold">Projects</h2>
-      <a href="https://github.com/yourusername?tab=repositories" target="_blank" class="text-sm font-semibold text-[var(--brand)] underline">All repos →</a>
+      <a href="https://github.com/nitishbelagali?tab=repositories" target="_blank" class="text-sm font-semibold text-[var(--brand)] underline">All repos →</a>
     </div>
     <div class="mt-4 grid gap-4 md:grid-cols-2">
+
+      <!-- Spotify Data Pipeline -->
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-        <h3 class="font-semibold">Oracle SEND Export Automation</h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Python + cx_Oracle + multithreading to export 50M+ weekly rows; archival & scheduling.</p>
+        <h3 class="font-semibold">Spotify Data Pipeline</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Cloud-native ETL with Spark & Airflow on AWS for analytics in Redshift.</p>
+        <div class="mt-2 text-xs text-slate-500"><b>Tools:</b> Spark, Airflow, EMR, S3, Redshift, EC2, CloudWatch, Python, SQL, Power BI</div>
         <div class="mt-3 flex gap-3 text-sm">
-          <a class="underline" target="_blank" href="https://github.com/yourusername/sender-export">GitHub</a>
-          <a class="underline" target="_blank" href="#">Demo/Write‑up</a>
+          <a class="underline" target="_blank" href="https://github.com/nitishbelagali">GitHub</a>
+          <a class="underline" href="#spotifyModal" onclick="document.getElementById('spotifyModal').showModal()">Demo/Write‑up</a>
         </div>
       </article>
+
+      <!-- GenAI RAG Chatbot -->
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-        <h3 class="font-semibold">Power BI Toxicology Dashboard</h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Interactive insights: dosing categories, study profiling, automated refresh.</p>
+        <h3 class="font-semibold">GenAI RAG Chatbot for Policies & FAQs</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">FastAPI + Chroma + Streamlit chatbot with accurate retrieval & citations.</p>
+        <div class="mt-2 text-xs text-slate-500"><b>Tools:</b> FastAPI, ChromaDB, Streamlit, Python, Docker</div>
         <div class="mt-3 flex gap-3 text-sm">
-          <a class="underline" target="_blank" href="#">Case Study (PDF)</a>
+          <a class="underline" target="_blank" href="https://github.com/nitishbelagali">GitHub</a>
+          <a class="underline" href="#ragModal" onclick="document.getElementById('ragModal').showModal()">Demo/Write‑up</a>
         </div>
       </article>
+
+      <!-- End-to-End BI Project -->
+      <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">End‑to‑End BI Project</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Standardized 1M+ records; Airflow ETL → Azure SQL DW; dashboards in Power BI/Tableau.</p>
+        <div class="mt-2 text-xs text-slate-500"><b>Tools:</b> Alteryx, ER Studio, Airflow, Azure SQL DW, Azure DevOps, Power BI, Tableau</div>
+        <div class="mt-3 flex gap-3 text-sm">
+          <a class="underline" target="_blank" href="https://github.com/nitishbelagali">GitHub</a>
+          <a class="underline" href="#biModal" onclick="document.getElementById('biModal').showModal()">Demo/Write‑up</a>
+        </div>
+      </article>
+
+      <!-- Math Score Prediction -->
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
         <h3 class="font-semibold">Math Score Prediction</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">EDA + feature engineering; XGBoost best with ~89.5% R²; Flask app deploy.</p>
+        <div class="mt-2 text-xs text-slate-500"><b>Tools:</b> Python, Pandas, XGBoost, Flask, Docker, AWS EB/EC2, Azure</div>
         <div class="mt-3 flex gap-3 text-sm">
-          <a class="underline" target="_blank" href="https://github.com/yourusername/math-score-prediction">GitHub</a>
-          <a class="underline" target="_blank" href="#">Live Demo</a>
+          <a class="underline" target="_blank" href="https://github.com/nitishbelagali">GitHub</a>
+          <a class="underline" href="#mathModal" onclick="document.getElementById('mathModal').showModal()">Demo/Write‑up</a>
         </div>
       </article>
+
+      <!-- Adult Income Analysis -->
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
         <h3 class="font-semibold">Adult Income Analysis</h3>
-        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Clustering + classification with logistic regression/KNN; 87% accuracy.</p>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Classification with logistic regression/KNN; 87% accuracy.</p>
+        <div class="mt-2 text-xs text-slate-500"><b>Tools:</b> Python, Pandas, scikit‑learn, Statistics</div>
         <div class="mt-3 flex gap-3 text-sm">
-          <a class="underline" target="_blank" href="https://github.com/yourusername/adult-income-analysis">GitHub</a>
+          <a class="underline" target="_blank" href="https://github.com/nitishbelagali">GitHub</a>
+          <a class="underline" href="#adultModal" onclick="document.getElementById('adultModal').showModal()">Demo/Write‑up</a>
         </div>
       </article>
+
+      <!-- Vrinda Store Excel -->
+      <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Vrinda Store Data Analysis (Excel)</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">40k+ records cleaned & enriched; 6 pivots; interactive dashboard.</p>
+        <div class="mt-2 text-xs text-slate-500"><b>Tools:</b> MS Excel (VLOOKUP, Pivot, Charts), PowerPoint</div>
+        <div class="mt-3 flex gap-3 text-sm">
+          <a class="underline" target="_blank" href="https://github.com/nitishbelagali">GitHub</a>
+          <a class="underline" href="#vrindaModal" onclick="document.getElementById('vrindaModal').showModal()">Demo/Write‑up</a>
+        </div>
+      </article>
+
+      <!-- Airport Management System -->
+      <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">Airport Management System</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Relational DB with 11 entities; optimized SQL; UI with Node.js + React.</p>
+        <div class="mt-2 text-xs text-slate-500"><b>Tools:</b> SQL, Power BI, Node.js, React</div>
+        <div class="mt-3 flex gap-3 text-sm">
+          <a class="underline" target="_blank" href="https://github.com/nitishbelagali">GitHub</a>
+          <a class="underline" href="#airportModal" onclick="document.getElementById('airportModal').showModal()">Demo/Write‑up</a>
+        </div>
+      </article>
+
+      <!-- JPMC Forage -->
+      <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+        <h3 class="font-semibold">JPMC Excel Skills (Forage)</h3>
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Macros, VBA, automation; charts & interactive dashboards.</p>
+        <div class="mt-2 text-xs text-slate-500"><b>Tools:</b> MS Excel, VBA, PowerPoint</div>
+        <div class="mt-3 flex gap-3 text-sm">
+          <a class="underline" target="_blank" href="https://github.com/nitishbelagali">GitHub</a>
+          <a class="underline" href="#jpmcModal" onclick="document.getElementById('jpmcModal').showModal()">Demo/Write‑up</a>
+        </div>
+      </article>
+
     </div>
+  </section>
+
+  <!-- Highlights -->
+  <section id="highlights" class="container mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold">Highlights</h2>
+    <ul class="mt-4 grid md:grid-cols-2 gap-3 text-sm">
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🎓 Teaching Assistant (Fall 2024) for Application Engineering & Design; supported ~200 students.</li>
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🧠 Independent research: AI‑augmented BI pipelines (KPIs, forecasting, automated insights).</li>
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🏛️ General Secretary, KLE Tech (2019–2020), representing 2000+ students.</li>
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🤝 Led Dharwad flood‑relief campaign (2019), raising ₹2,00,000 (~$2,600).</li>
+    </ul>
   </section>
 
   <!-- Fun facts -->
   <section id="fun" class="container mx-auto px-4 py-10">
     <h2 class="text-2xl font-bold">Fun Facts</h2>
     <ul class="mt-3 grid md:grid-cols-3 gap-3 text-sm">
-      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🎓 I enjoy teaching & mentoring peers.</li>
-      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🤖 Built robotics & AI side projects for fun.</li>
-      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🥾 Love trekking & street photography.</li>
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">⚽ Huge football (soccer) fan & player</li>
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🏋️‍♂️ Lift regularly</li>
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🥾 Love trekking & jogging—anything off‑screen</li>
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🖋️ Tattoo enthusiast (5 tattoos)</li>
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🧥 Into new fashion trends</li>
+      <li class="p-4 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">🎉 Party animal</li>
     </ul>
   </section>
 
@@ -202,15 +296,15 @@
       <div class="mt-5 grid md:grid-cols-3 gap-4 text-sm">
         <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800">
           <div class="font-semibold">Email</div>
-          <a class="underline" href="mailto:nitish@example.com">nitish@example.com</a>
+          <a class="underline" href="mailto:nitish.belagali@gmail.com">nitish.belagali@gmail.com</a>
         </div>
         <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800">
           <div class="font-semibold">Address</div>
-          <div>Boston, MA, USA</div>
+          <div>1209, Boylston Street, Boston, MA 02215</div>
         </div>
         <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800">
           <div class="font-semibold">GitHub</div>
-          <a class="underline" href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+          <a class="underline" href="https://github.com/nitishbelagali" target="_blank">github.com/nitishbelagali</a>
         </div>
       </div>
     </div>
@@ -219,6 +313,127 @@
   <footer class="py-8 text-center text-xs text-slate-500">
     © <span id="year"></span> Nitish Belagali • Built with Tailwind • Hosted on GitHub Pages
   </footer>
+
+  <!-- WRITE-UP MODALS (one-page, no extra files needed) -->
+  <dialog id="spotifyModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">Spotify Data Pipeline — Detailed Write‑up</h3>
+        <button class="chip" onclick="document.getElementById('spotifyModal').close()">Close</button>
+      </div>
+      <p class="mt-2 text-sm text-slate-500">Personal Project • Boston, USA</p>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Designed and implemented a <b>cloud‑native ETL pipeline</b> orchestrated with <b>Apache Airflow</b> and executed on <b>Spark</b>.</li>
+        <li>Ingested raw data from <b>HDFS</b> to <b>AWS S3</b>, applied Spark transformations, and loaded results into <b>Amazon Redshift</b>.</li>
+        <li>Architected scalable infrastructure with <b>EMR</b>, <b>EC2</b>, and <b>CloudWatch</b> monitoring; cost‑efficient and reliable.</li>
+        <li>Leveraged microservices/serverless concepts; improved pipeline efficiency by <b>30%</b> and reduced latency by <b>50%</b>.</li>
+        <li>Built a query layer & dashboards (Redshift → <b>Power BI</b>) for listening patterns and engagement analytics.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> Spark, Airflow, EMR, S3, Redshift, EC2, CloudWatch, Python (PySpark, boto3), SQL, Power BI</p>
+    </div>
+  </dialog>
+
+  <dialog id="ragModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">GenAI RAG Chatbot for Policies & FAQs — Write‑up</h3>
+        <button class="chip" onclick="document.getElementById('ragModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Developed a retrieval‑augmented chatbot with <b>FastAPI</b>, <b>ChromaDB</b>, and <b>Streamlit</b> featuring accurate query + citation retrieval.</li>
+        <li>Dockerized and deployed the pipeline; tracked evaluation metrics for accuracy and latency to ensure production‑readiness.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> FastAPI, ChromaDB, Streamlit, Python, Docker</p>
+    </div>
+  </dialog>
+
+  <dialog id="biModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">End‑to‑End BI Project — Write‑up</h3>
+        <button class="chip" onclick="document.getElementById('biModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Standardized and integrated <b>1M+ datasets</b> (Austin, Chicago, NYC) using <b>Alteryx</b> and <b>ER Studio</b> for lineage & schema.</li>
+        <li>Automated ETL with <b>Apache Airflow</b> into <b>Azure SQL DW</b>; CI/CD with <b>Azure DevOps</b>.</li>
+        <li>Built 5+ interactive dashboards in <b>Power BI</b> & <b>Tableau</b>, reducing reporting effort and improving accessibility.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> Alteryx, ER Studio, Airflow, Azure SQL DW, Azure DevOps, Power BI, Tableau</p>
+    </div>
+  </dialog>
+
+  <dialog id="mathModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">Math Score Prediction — Write‑up</h3>
+        <button class="chip" onclick="document.getElementById('mathModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Extensive EDA on a 2GB dataset (≈4M rows, 10 columns); feature engineering and ingestion pipeline.</li>
+        <li>Trained multiple models (RF, DT, GBoost, LR, <b>XGBoost</b>, CatBoost, AdaBoost); XGBoost achieved <b>R² ≈ 89.5%</b>.</li>
+        <li>Built a <b>Flask</b> app for real‑time predictions; automated training & inference; deployed on <b>AWS EB, EC2, Azure</b> with <b>Docker</b> and CI/CD via GitHub Actions.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> Python, Pandas, XGBoost, Flask, Docker, AWS EB/EC2, Azure, GitHub Actions</p>
+    </div>
+  </dialog>
+
+  <dialog id="adultModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">Adult Income Analysis — Write‑up</h3>
+        <button class="chip" onclick="document.getElementById('adultModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Led a data‑science initiative on the Adult Census dataset for income prediction; cleaning & EDA with outlier handling.</li>
+        <li>Applied logistic regression, KNN, Chi‑square, and ANOVA; achieved <b>87%</b> accuracy; used AutoML for model selection.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> Python, scikit‑learn, Statistics</p>
+    </div>
+  </dialog>
+
+  <dialog id="vrindaModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">Vrinda Store Data Analysis (Excel) — Write‑up</h3>
+        <button class="chip" onclick="document.getElementById('vrindaModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Imported & enhanced 40k+ records; cleaned anomalies and added custom columns (VLOOKUP & formulas), improving accuracy by 20%.</li>
+        <li>Built 6 pivot tables to dissect sales; 15% improvement in reporting efficiency.</li>
+        <li>Created an interactive dashboard that enabled a 25% quicker response to market trends.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> MS Excel, PowerPoint</p>
+    </div>
+  </dialog>
+
+  <dialog id="airportModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">Airport Management System — Write‑up</h3>
+        <button class="chip" onclick="document.getElementById('airportModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Designed a relational database with 11 entities; optimized complex SQL and functions.</li>
+        <li>Built a UI with <b>Node.js</b> & <b>React</b>; visualized with <b>Power BI</b>; streamlined data management.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> SQL, Power BI, Node.js, React</p>
+    </div>
+  </dialog>
+
+  <dialog id="jpmcModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">JPMC Excel Skills (Forage) — Write‑up</h3>
+        <button class="chip" onclick="document.getElementById('jpmcModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Advanced Excel: data cleansing, manipulation, conditional formatting; strong analysis techniques.</li>
+        <li>Recorded macros & scripted in <b>VBA</b>; created two functional macros with buttons on account sales data.</li>
+        <li>Designed impactful charts & interactive dashboards using Excel & PowerPoint; strong data storytelling.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> MS Excel, VBA, PowerPoint</p>
+    </div>
+  </dialog>
 
   <script>
     // Year
