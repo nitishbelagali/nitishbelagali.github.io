@@ -390,15 +390,18 @@
     els.forEach(el=>io.observe(el));
 
     // ---- Charts ----
-    const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const chartOptsBase = {
-      animation: prefersReduce ? false : { duration: 900, easing: 'easeOutQuart' },
-      responsive: true,
-      plugins: { legend: { labels: { color: getColor() } } },
-      scales: {}
+    const isDark = document.documentElement.classList.contains('dark');
+    const colors = {
+      text: isDark ? '#E5E7EB' : '#0F172A',
+      grid: isDark ? 'rgba(226,232,240,0.18)' : 'rgba(100,116,139,0.25)',
+      brand: '#3B82F6',
+      brandFill: 'rgba(59,130,246,0.35)',
+      segs: ['#60A5FA','#A78BFA','#22D3EE','#F59E0B']
     };
 
-    function getColor(){return getComputedStyle(document.documentElement).classList?.contains('dark') ? '#e5e7eb' : '#0f172a'}
+    Chart.defaults.color = colors.text;
+    Chart.defaults.borderColor = colors.grid;
+    Chart.defaults.font.family = 'Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
 
     // Radar: skills
     const radarCtx = document.getElementById('skillsRadar');
@@ -411,12 +414,24 @@
             label: 'Strength',
             data: [9, 8, 6, 9, 7, 8],
             fill: true,
-            backgroundColor: 'rgba(59,130,246,0.20)',
-            borderColor: 'rgba(59,130,246,1)',
-            pointBackgroundColor: 'rgba(59,130,246,1)'
+            backgroundColor: colors.brandFill,
+            borderColor: colors.brand,
+            borderWidth: 3,
+            pointBackgroundColor: colors.brand,
+            pointBorderColor: colors.brand
           }]
         },
-        options: { ...chartOptsBase, scales: { r: { angleLines: { color: 'rgba(148,163,184,.3)' }, grid: { color: 'rgba(148,163,184,.3)' }, pointLabels: { color: getColor() }, ticks: { display: false } } } }
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: { duration: 800 },
+          scales: { r: {
+            angleLines: { color: colors.grid },
+            grid: { color: colors.grid },
+            suggestedMin: 0, suggestedMax: 10, ticks: { stepSize: 2, color: colors.text },
+            pointLabels: { color: colors.text, font: { size: 12, weight: '600' } }
+          }}
+        }
       });
     }
 
@@ -427,12 +442,13 @@
         type: 'doughnut',
         data: {
           labels: ['Data Eng','BI/Dashboards','ML','Excel/VBA'],
-          datasets: [{
-            data: [3, 3, 2, 1],
-            backgroundColor: ['#60a5fa','#a78bfa','#22d3ee','#f59e0b']
-          }]
-        },
-        options: { ...chartOptsBase, cutout: '60%', plugins: { legend: { position: 'bottom', labels: { color: getColor() } } } }
+          datasets: [{ data: [3, 3, 2, 1], backgroundColor: colors.segs, borderWidth: 0 }] },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          cutout: '62%',
+          plugins: { legend: { position: 'bottom', labels: { color: colors.text, boxWidth: 16 } } }
+        }
       });
     }
   </script>
