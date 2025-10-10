@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Pre-paint theme init + Tailwind config (MUST be before Tailwind CDN) -->
+  <!-- Pre-paint theme init + Tailwind config (must be before Tailwind) -->
   <script>
     (() => {
       const saved = localStorage.getItem('theme');
@@ -139,11 +139,10 @@
     </div>
   </section>
 
-  <!-- Experience (logos in assets/logo/) -->
+  <!-- Experience -->
   <section id="experience" class="container mx-auto px-4 py-10 reveal">
     <h2 class="text-2xl font-bold">Experience</h2>
     <div class="mt-4 grid gap-4">
-
       <article class="relative p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 card">
         <img src="assets/logo/bi.png" alt="Boehringer Ingelheim" class="absolute right-5 top-5 h-9 w-auto opacity-80" onerror="this.style.display='none'">
         <h3 class="font-semibold">IT Data Analyst (Co-op) — Boehringer Ingelheim</h3>
@@ -187,7 +186,6 @@
           <li>Automated SQL operations, boosting database performance by <b>25%</b>.</li>
         </ul>
       </article>
-
     </div>
   </section>
 
@@ -214,6 +212,7 @@
     </div>
     <div class="mt-4 grid gap-4 md:grid-cols-2">
 
+      <!-- Spotify Data Pipeline -->
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 card">
         <h3 class="font-semibold">Spotify Data Pipeline</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Cloud-native ETL with Spark & Airflow on AWS for analytics in Redshift.</p>
@@ -224,6 +223,7 @@
         </div>
       </article>
 
+      <!-- GenAI RAG Chatbot -->
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 card">
         <h3 class="font-semibold">GenAI RAG Chatbot for Policies & FAQs</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">FastAPI + Chroma + Streamlit chatbot with accurate retrieval & citations.</p>
@@ -234,6 +234,7 @@
         </div>
       </article>
 
+      <!-- End-to-End BI -->
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 card">
         <h3 class="font-semibold">End-to-End BI Project</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Standardized 1M+ records; Airflow ETL → Azure SQL DW; dashboards in Power BI/Tableau.</p>
@@ -244,6 +245,7 @@
         </div>
       </article>
 
+      <!-- Math Score Prediction -->
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 card">
         <h3 class="font-semibold">Math Score Prediction</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">EDA + feature engineering; XGBoost best with ~89.5% R²; Flask app deploy.</p>
@@ -254,6 +256,7 @@
         </div>
       </article>
 
+      <!-- Adult Income Analysis -->
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 card">
         <h3 class="font-semibold">Adult Income Analysis</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Classification with logistic regression/KNN; 87% accuracy.</p>
@@ -264,6 +267,7 @@
         </div>
       </article>
 
+      <!-- Vrinda Store -->
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 card">
         <h3 class="font-semibold">Vrinda Store Data Analysis (Excel)</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">40k+ records cleaned & enriched; 6 pivots; interactive dashboard.</p>
@@ -274,6 +278,7 @@
         </div>
       </article>
 
+      <!-- Airport System -->
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 card">
         <h3 class="font-semibold">Airport Management System</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Relational DB with 11 entities; optimized SQL; UI with Node.js + React.</p>
@@ -284,6 +289,7 @@
         </div>
       </article>
 
+      <!-- JPMC Forage -->
       <article class="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 card">
         <h3 class="font-semibold">JPMC Excel Skills (Forage)</h3>
         <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Macros, VBA, automation; charts & interactive dashboards.</p>
@@ -347,7 +353,9 @@
     © <span id="year"></span> Nitish Belagali • Built with Tailwind • Hosted on GitHub Pages
   </footer>
 
-  <!-- WRITE-UP MODALS -->
+  <!-- =================== WRITE-UP MODALS =================== -->
+
+  <!-- Spotify -->
   <dialog id="spotifyModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
     <div class="p-6 md:p-8 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100">
       <div class="flex items-start justify-between gap-6">
@@ -364,8 +372,9 @@
     </div>
   </dialog>
 
+  <!-- GenAI RAG -->
   <dialog id="ragModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
-    <div class="p-6 md:p-8 bg-white dark:bg-slate-900">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100">
       <div class="flex items-start justify-between gap-6">
         <h3 class="text-xl font-bold">GenAI RAG Chatbot for Policies & FAQs — Write-up</h3>
         <button class="chip" onclick="document.getElementById('ragModal').close()">Close</button>
@@ -378,8 +387,103 @@
     </div>
   </dialog>
 
-  <!-- other modals trimmed for brevity in this version -->
+  <!-- End-to-End BI -->
+  <dialog id="biModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">End-to-End BI Project — Write-up</h3>
+        <button class="chip" onclick="document.getElementById('biModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Standardized & integrated <b>1M+ records</b> (Austin, Chicago, NYC) with <b>Alteryx</b> & <b>ER Studio</b> for lineage and schema.</li>
+        <li>Automated ETL with <b>Apache Airflow</b> into <b>Azure SQL DW</b>; CI/CD in <b>Azure DevOps</b>.</li>
+        <li>Built 5+ interactive dashboards in <b>Power BI</b> and <b>Tableau</b>; improved reporting accessibility.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> Alteryx, ER Studio, Airflow, Azure SQL DW, Azure DevOps, Power BI, Tableau</p>
+    </div>
+  </dialog>
 
+  <!-- Math Score -->
+  <dialog id="mathModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">Math Score Prediction — Write-up</h3>
+        <button class="chip" onclick="document.getElementById('mathModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>EDA on ~4M rows; feature engineering; ingestion & training pipelines.</li>
+        <li>Models: RF, DT, GB, LR, <b>XGBoost</b>, CatBoost, AdaBoost — XGBoost hit <b>R² ≈ 89.5%</b>.</li>
+        <li><b>Flask</b> app for real-time inference; Docker + CI/CD; deployed to AWS EB/EC2 and Azure.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> Python, Pandas, XGBoost, Flask, Docker, AWS EB/EC2, Azure, GitHub Actions</p>
+    </div>
+  </dialog>
+
+  <!-- Adult Income -->
+  <dialog id="adultModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">Adult Income Analysis — Write-up</h3>
+        <button class="chip" onclick="document.getElementById('adultModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Cleaned the Adult Census dataset; outlier handling; EDA.</li>
+        <li>Models & stats: logistic regression, KNN, Chi-square, ANOVA — <b>87%</b> accuracy.</li>
+        <li>AutoML used for model selection and tuning.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> Python, scikit-learn, Statistics</p>
+    </div>
+  </dialog>
+
+  <!-- Vrinda Store -->
+  <dialog id="vrindaModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">Vrinda Store Data Analysis (Excel) — Write-up</h3>
+        <button class="chip" onclick="document.getElementById('vrindaModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Imported & cleaned 40k+ records; created helper columns (VLOOKUP & formulas).</li>
+        <li>Built six pivot tables for sales analysis; improved reporting efficiency by 15%.</li>
+        <li>Interactive dashboard enabled a 25% quicker response to market trends.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> MS Excel, PowerPoint</p>
+    </div>
+  </dialog>
+
+  <!-- Airport System -->
+  <dialog id="airportModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">Airport Management System — Write-up</h3>
+        <button class="chip" onclick="document.getElementById('airportModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Designed a relational DB with 11 entities; optimized complex SQL & functions.</li>
+        <li>Built a UI with <b>Node.js</b> + <b>React</b>; visualized with <b>Power BI</b>.</li>
+        <li>Integrated functions to streamline data management and improve efficiency.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> SQL, Power BI, Node.js, React</p>
+    </div>
+  </dialog>
+
+  <!-- JPMC Forage -->
+  <dialog id="jpmcModal" class="p-0 rounded-2xl w-[min(900px,92vw)]">
+    <div class="p-6 md:p-8 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100">
+      <div class="flex items-start justify-between gap-6">
+        <h3 class="text-xl font-bold">JPMC Excel Skills (Forage) — Write-up</h3>
+        <button class="chip" onclick="document.getElementById('jpmcModal').close()">Close</button>
+      </div>
+      <ul class="mt-4 list-disc pl-6 space-y-2 text-sm">
+        <li>Data cleansing, manipulation, conditional formatting; strong Excel analysis.</li>
+        <li>Recorded macros & wrote <b>VBA</b>; added two functional macro buttons.</li>
+        <li>Charts + interactive dashboards; clear data storytelling in PowerPoint.</li>
+      </ul>
+      <p class="mt-4 text-sm"><b>Tools:</b> MS Excel, VBA, PowerPoint</p>
+    </div>
+  </dialog>
+
+  <!-- =================== SCRIPTS =================== -->
   <script>
     // YEAR
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -416,20 +520,20 @@
       const chip = document.getElementById('views');
 
       try {
-        // 1) countapi.dev (update increments)
+        // 1) countapi.dev
         let data = await tryCount(`https://api.countapi.dev/update/${NS}/${KEY}/?amount=1`);
         if (!data || typeof data.value !== 'number') throw new Error('dev schema');
         el.textContent = data.value.toLocaleString();
         chip.classList.remove('hidden');
       } catch (e1) {
         try {
-          // 2) countapi.xyz (hit increments)
+          // 2) countapi.xyz
           let data = await tryCount(`https://api.countapi.xyz/hit/${NS}/${KEY}`);
           if (!data || typeof data.value !== 'number') throw new Error('xyz schema');
           el.textContent = data.value.toLocaleString();
           chip.classList.remove('hidden');
         } catch (e2) {
-          // 3) local fallback (device-only)
+          // 3) local fallback
           let n = parseInt(localStorage.getItem('local_pv') || '0', 10) + 1;
           localStorage.setItem('local_pv', String(n));
           el.textContent = `${n.toLocaleString()} (local)`;
